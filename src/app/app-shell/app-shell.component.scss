@@ -1,11 +1,21 @@
+:root {
+  --body-bg: #fff ;
+  --body-color: #212529;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #000 ;
+    --body-color: #f8f9fa;
+  }
+}
 body {
   margin: 0;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
+  color: var(--body-color);
+  background-color: var(--body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
