@@ -1,7 +1,7 @@
 {
   "name": "Smart Garden",
   "short_name": "Smart Garden",
-  "theme_color": "#62bd69",
+  "theme_color": "#22ac16",
   "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/smart-garden/",
