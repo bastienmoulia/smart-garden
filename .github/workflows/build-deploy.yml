@@ -22,7 +22,7 @@ jobs:
     - uses: bahmutov/npm-install@v1
 
     - name: Build
-      run: npm run app-shell
+      run: npm run app-shell-ci
 
     - name: Deploy
       if: success()

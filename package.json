@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "app-shell": "ng run smart-garden:app-shell:production",
-    "http-server": "npx http-server -p 8080 -c-1 dist/smart-garden/browser"
+    "http-server": "npx http-server -p 8080 -c-1 dist/smart-garden/browser",
+    "app-shell-ci": "ng run smart-garden:app-shell-ci:production"
   },
   "private": true,
   "dependencies": {
