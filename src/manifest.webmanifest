@@ -4,8 +4,8 @@
   "theme_color": "#62bd69",
   "background_color": "#ffffff",
   "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "/smart-garden/",
+  "start_url": "/smart-garden/",
   "icons": [
     {
       "src": "assets/icons/icon-192x192.png",
