@@ -17,6 +17,9 @@ $primary: #22ac16;
 }
 $body-bg: var(--body-bg);
 $body-color: var(--body-color);
+body {
+  overscroll-behavior: none;
+}
 
 // Layout & components
 
