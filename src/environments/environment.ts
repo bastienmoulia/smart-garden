@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  particleApi: 'http://localhost:3000',
 };
 
 /*
