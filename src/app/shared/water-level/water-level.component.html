@@ -4,10 +4,26 @@
   viewBox="0 0 100 100"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <polygon points="10,10 25,90 75,90 90,10" style="fill: var(--blue);" />
-  <polygon points="15,30 25,90 75,90 85,30" style="fill: var(--yellow);" />
-  <polygon points="20,50 25,90 75,90 80,50" style="fill: var(--orange);" />
-  <polygon points="25,70 25,90 75,90 75,70" style="fill: var(--red);" />
+  <polygon
+    points="10,10 25,90 75,90 90,10"
+    style="fill: var(--blue);"
+    *ngIf="level >= 75"
+  />
+  <polygon
+    points="15,30 25,90 75,90 85,30"
+    style="fill: var(--yellow);"
+    *ngIf="level < 75 && level >= 50"
+  />
+  <polygon
+    points="20,50 25,90 75,90 80,50"
+    style="fill: var(--orange);"
+    *ngIf="level < 50 && level >= 25"
+  />
+  <polygon
+    points="25,70 25,90 75,90 75,70"
+    style="fill: var(--red);"
+    *ngIf="level < 25"
+  />
   <polyline
     points="10,10 25,90 75,90 90,10"
     style="fill: transparent; stroke: var(--gray); stroke-width: 10;"

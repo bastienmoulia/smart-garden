@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'sg-water-level',
   templateUrl: './water-level.component.html',
-  styleUrls: ['./water-level.component.scss']
+  styleUrls: ['./water-level.component.scss'],
 })
 export class WaterLevelComponent implements OnInit {
+  @Input() level: number;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
