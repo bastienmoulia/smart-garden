@@ -4,5 +4,20 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+  "settings": {
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#22ac16"
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.tslint": true
+    },
+    "editor.formatOnSave": true
+  },
+  "extensions": {
+    "recommendations": [
+      "angular.ng-template",
+      "esbenp.prettier-vscode",
+      "ms-vscode.vscode-typescript-tslint-plugin"
+    ]
+  }
 }

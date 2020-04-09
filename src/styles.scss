@@ -3,7 +3,7 @@
 body {
   overflow: hidden;
   overscroll-behavior: none;
-  background-color: $primary!important;
+  background-color: $primary !important;
 }
 
 // Layout & components
@@ -37,11 +37,9 @@ body {
 //@import '~bootstrap/scss/carousel';
 //@import '~bootstrap/scss/spinners';
 
-
 // Helpers
 
 @import '~bootstrap/scss/helpers';
-
 
 // Utilities
 
