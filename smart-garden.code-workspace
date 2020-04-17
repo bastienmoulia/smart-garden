@@ -1,9 +1,9 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
   "settings": {
     "workbench.colorCustomizations": {
       "activityBar.background": "#22ac16"
@@ -11,7 +11,8 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.tslint": true
     },
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "npm.enableScriptExplorer": true
   },
   "extensions": {
     "recommendations": [
