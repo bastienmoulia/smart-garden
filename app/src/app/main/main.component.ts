@@ -19,11 +19,11 @@ export class MainComponent implements OnInit, OnDestroy {
   constructor(private particleService: ParticleService) {}
 
   ngOnInit(): void {
-    if (!('Notification' in window)) {
+    /*if (!('Notification' in window)) {
       console.warn('This browser does not support desktop notification');
     } else if (Notification.permission === 'default') {
       this.showNotifyMe = true;
-    }
+    }*/
     this.getLevels();
     this.intervalId = window.setInterval(() => {
       this.getLevels();

@@ -4,19 +4,19 @@ const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
-server.get('/devices/0123456789abcdef01234567/water-levels', (req, res) => {
+server.get('/devices/e00fce68ecae511856da9204/waterlevels', (req, res) => {
   const topLevel = Math.round(Math.random() * 100);
   const bottomLevel = Math.round(Math.random() * 100);
   const date = new Date().toISOString();
   res.jsonp({
-    name: 'water-levels',
+    name: 'waterlevels',
     result: {
       topLevel: topLevel,
       bottomLevel: bottomLevel,
     },
     coreInfo: {
       name: 'smart-garden',
-      deviceID: '0123456789abcdef01234567',
+      deviceID: 'e00fce68ecae511856da9204',
       connected: true,
       last_handshake_at: date,
       last_app: '',
