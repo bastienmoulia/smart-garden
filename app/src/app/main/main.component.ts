@@ -25,9 +25,6 @@ export class MainComponent implements OnInit, OnDestroy {
       this.showNotifyMe = true;
     }*/
     this.getLevels();
-    this.intervalId = window.setInterval(() => {
-      this.getLevels();
-    }, INTERVAL * 1000);
   }
 
   getLevels() {
@@ -36,11 +33,17 @@ export class MainComponent implements OnInit, OnDestroy {
         this.topLevel = levels.topLevel;
         this.bottomLevel = levels.bottomLevel;
         this.showError = false;
+        window.setTimeout(() => {
+          this.getLevels();
+        }, INTERVAL * 1000);
       },
       () => {
         this.topLevel = null;
         this.bottomLevel = null;
         this.showError = true;
+        window.setTimeout(() => {
+          this.getLevels();
+        }, INTERVAL * 1000);
       }
     );
   }
