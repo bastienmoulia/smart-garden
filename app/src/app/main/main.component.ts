@@ -15,6 +15,7 @@ export class MainComponent implements OnInit, OnDestroy {
   showNotifyMe = false;
   showError = false;
   intervalId: number;
+  refresh = false;
 
   constructor(private particleService: ParticleService) {}
 
@@ -33,6 +34,10 @@ export class MainComponent implements OnInit, OnDestroy {
         this.topLevel = levels.topLevel;
         this.bottomLevel = levels.bottomLevel;
         this.showError = false;
+        this.refresh = true;
+        window.setTimeout(() => {
+          this.refresh = false;
+        }, 1000);
         window.setTimeout(() => {
           this.getLevels();
         }, INTERVAL * 1000);

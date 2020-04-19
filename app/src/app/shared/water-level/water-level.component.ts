@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class WaterLevelComponent implements OnInit {
   @Input() level: number;
+  @Input() refresh: boolean;
 
   constructor() {}
 
