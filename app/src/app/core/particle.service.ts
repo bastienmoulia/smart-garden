@@ -31,4 +31,11 @@ export class ParticleService {
       })
     );
   }
+
+  refill() {
+    return this.http.post(
+      `${environment.particleApi}/devices/${DEVICE}/refill?access_token=${TOKEN}`,
+      {}
+    );
+  }
 }

@@ -5,6 +5,11 @@
 int topLevel = 0;
 int bottomLevel = 0;
 
+/** Interval to request the api in seconds */
+#define interval 10
+/** Time to refill in seconds */
+#define refill_timeout 60
+
 // This routine runs only once upon reset
 void setup()
 {
@@ -13,6 +18,8 @@ void setup()
 
   // Set to LOW so no power flows through the sensor
   digitalWrite(topLevelPin, LOW);
+
+  Particle.function("reload", reload);
 }
 
 // This routine gets called repeatedly, like once every 5-15 milliseconds.
@@ -25,7 +32,12 @@ void loop()
   Particle.variable("topLevel", topLevel);
   Particle.variable("bottomLevel", bottomLevel);
   //Particle.variable("data", "{topLevel: " + String(topLevel) + ", bottomLevel: " + String(bottomLevel) + "}");
-  delay(10000);
+  delay(interval * 1000);
+}
+
+int reload(String extra)
+{
+  return 0;
 }
 
 int readTopLevel()

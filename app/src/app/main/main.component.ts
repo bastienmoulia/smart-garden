@@ -3,6 +3,8 @@ import { ParticleService } from '../core/particle.service';
 
 /** Interval to request the api in seconds */
 const INTERVAL = 10;
+/** Time to refill in seconds */
+const REFILL_TIMEOUT = 60;
 
 @Component({
   selector: 'sg-main',
@@ -16,6 +18,7 @@ export class MainComponent implements OnInit, OnDestroy {
   showError = false;
   intervalId: number;
   refresh = false;
+  refilling = false;
 
   constructor(private particleService: ParticleService) {}
 
@@ -59,6 +62,20 @@ export class MainComponent implements OnInit, OnDestroy {
         this.showNotifyMe = false;
       }
     });
+  }
+
+  refill() {
+    this.refilling = true;
+    this.particleService.refill().subscribe(
+      () => {
+        window.setTimeout(() => {
+          this.refilling = false;
+        }, REFILL_TIMEOUT);
+      },
+      () => {
+        this.refilling = false;
+      }
+    );
   }
 
   ngOnDestroy() {
