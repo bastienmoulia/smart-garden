@@ -5,7 +5,7 @@ import { map, combineLatest } from 'rxjs/operators';
 import { forkJoin } from 'rxjs/internal/observable/forkJoin';
 
 const DEVICE = 'e00fce68ecae511856da9204';
-const TOKEN = '246d8669b285a599cf9def555fdc5c0a21fdeebe';
+const TOKEN = '44ff2f1650f409c184a3f2d363c9be5578f18787';
 
 @Injectable({
   providedIn: 'root',

@@ -1,6 +1,8 @@
 
-#define topLevelPower 7
-#define topLevelPin A0
+#define bottomLevelPower 7
+#define bottomLevelPin A0
+#define topLevelPower 6
+#define topLevelPin A1
 
 int topLevel = 0;
 int bottomLevel = 0;
@@ -14,9 +16,11 @@ int bottomLevel = 0;
 void setup()
 {
   // Set D7 as an OUTPUT
+  pinMode(bottomLevelPower, OUTPUT);
   pinMode(topLevelPower, OUTPUT);
 
   // Set to LOW so no power flows through the sensor
+  digitalWrite(bottomLevelPin, LOW);
   digitalWrite(topLevelPin, LOW);
 
   Particle.function("reload", reload);
@@ -27,8 +31,8 @@ void setup()
 // Make sure none of your code delays or blocks for too long (like more than 5 seconds), or weird things can happen.
 void loop()
 {
+  bottomLevel = convertLevel(readBottomLevel());
   topLevel = convertLevel(readTopLevel());
-  bottomLevel = topLevel;
   Particle.variable("topLevel", topLevel);
   Particle.variable("bottomLevel", bottomLevel);
   //Particle.variable("data", "{topLevel: " + String(topLevel) + ", bottomLevel: " + String(bottomLevel) + "}");
@@ -38,6 +42,15 @@ void loop()
 int reload(String extra)
 {
   return 0;
+}
+
+int readBottomLevel()
+{
+  digitalWrite(bottomLevelPower, HIGH); // Turn the sensor ON
+  delay(10);                            // wait 10 milliseconds
+  int val = analogRead(bottomLevelPin); // Read the analog value form sensor
+  digitalWrite(bottomLevelPower, LOW);  // Turn the sensor OFF
+  return val;                           // send current reading
 }
 
 int readTopLevel()

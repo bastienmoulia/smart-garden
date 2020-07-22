@@ -1,0 +1,16 @@
+{
+  "name": "particle",
+  "version": "1.0.0",
+  "description": "A Particle project named particle",
+  "main": "src/particle.ino",
+  "dependencies": {
+    "particle-cli": "^2.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "token": "particle token create"
+  },
+  "author": "Bastien Moulia <bmoulia@gmail.com> (https://github.com/bastienmoulia/)",
+  "private": true
+}

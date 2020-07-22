@@ -1,5 +1,5 @@
 {
   "particle.targetDevice": "smart-garden",
-  "particle.firmwareVersion": "1.5.0",
+  "particle.firmwareVersion": "1.5.2",
   "particle.targetPlatform": "argon"
 }
