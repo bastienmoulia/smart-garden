@@ -1,0 +1,78 @@
+{
+  "configVersion": 1,
+  "timestamp": 1595441695262,
+  "index": "/smart-garden/index.html",
+  "assetGroups": [
+    {
+      "name": "sg",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/smart-garden/favicon.ico",
+        "/smart-garden/index.html",
+        "/smart-garden/main-es2015.edbb6967bd6fba6d2403.js",
+        "/smart-garden/main-es5.edbb6967bd6fba6d2403.js",
+        "/smart-garden/manifest.webmanifest",
+        "/smart-garden/polyfills-es2015.95bb65e853d2781ac3bd.js",
+        "/smart-garden/polyfills-es5.341d48ffc88eaeae911d.js",
+        "/smart-garden/runtime-es2015.409e6590615fb48d139f.js",
+        "/smart-garden/runtime-es5.409e6590615fb48d139f.js",
+        "/smart-garden/styles.ad047ddb09ef3e6609d2.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/smart-garden/assets/icons/apple-touch-icon.png",
+        "/smart-garden/assets/icons/icon-192x192.png",
+        "/smart-garden/assets/icons/icon-512x512.png",
+        "/smart-garden/assets/icons/icon.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/smart-garden/assets/icons/apple-touch-icon.png": "eb461bfb0905590bc82ee9f6fea720849b7ecd03",
+    "/smart-garden/assets/icons/icon-192x192.png": "227a0922c7cd2384225f86c8f6cea7bc2264ecc4",
+    "/smart-garden/assets/icons/icon-512x512.png": "7b220c95354c95d78312ee54b783d8b806cca743",
+    "/smart-garden/assets/icons/icon.svg": "83260c740c07ee6334ded3510ac36e9ecfa4ab25",
+    "/smart-garden/favicon.ico": "ef491167c5a6670d5de8ef009b6491fedaad1529",
+    "/smart-garden/index.html": "66fe4d7205290003f22e87f91d671c7a614a4db6",
+    "/smart-garden/main-es2015.edbb6967bd6fba6d2403.js": "08b8fae05969074652793f9234be3a7e9d7c5453",
+    "/smart-garden/main-es5.edbb6967bd6fba6d2403.js": "0345c8e26ccef70e5f9b567a65777a0e20b223e5",
+    "/smart-garden/manifest.webmanifest": "9e8a5be52ac4c7cc0dd54ee2cc4abfb640a042f5",
+    "/smart-garden/polyfills-es2015.95bb65e853d2781ac3bd.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
+    "/smart-garden/polyfills-es5.341d48ffc88eaeae911d.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",
+    "/smart-garden/runtime-es2015.409e6590615fb48d139f.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/smart-garden/runtime-es5.409e6590615fb48d139f.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/smart-garden/styles.ad047ddb09ef3e6609d2.css": "fc78005496d4e48fb14cb9c37575ec24172e3b18"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
